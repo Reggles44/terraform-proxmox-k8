@@ -19,11 +19,3 @@ variable "vmid" {
   type = number
 }
 
-variable "ip_address" {
-  type = string
-}
-
-variable "gateway" {
-  type = string
-}
-
