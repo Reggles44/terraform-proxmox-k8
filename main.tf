@@ -15,12 +15,7 @@ provider "proxmox" {
 }
 
 resource "proxmox_vm_qemu" "k8_node" {
-  depends_on = [
-    macaddress.k8_admin_mac_address,
-  ]
-
-  count = 10
-
+  count            = 10
   name             = "k8-node-${count.index}"
   desc             = "K8 Node ${count.index}"
   vmid             = var.vmid + count.index
@@ -58,10 +53,9 @@ resource "proxmox_vm_qemu" "k8_node" {
   }
 
   network {
-    id      = 1
-    bridge  = "vmbr0"
-    model   = "virtio"
-    macaddr = macaddress.k8_admin_mac_address.address
+    id     = 1
+    bridge = "vmbr0"
+    model  = "virtio"
   }
 
   os_type       = "cloud-init"
