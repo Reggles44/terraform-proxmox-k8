@@ -18,7 +18,7 @@ resource "proxmox_vm_qemu" "k8_node" {
   count            = 10
   name             = "k8-node-${count.index}"
   desc             = "K8 Node ${count.index}"
-  vmid             = var.vmid + count.index
+  vmid             = var.vmid + count.index + 1
   clone            = "debian"
   full_clone       = true
   cores            = 4
