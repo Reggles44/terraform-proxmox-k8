@@ -4,15 +4,6 @@ terraform {
       source  = "telmate/proxmox"
       version = "3.0.1-rc6"
     }
-    macaddress = {
-      version = "0.3.2"
-      source  = "ivoronin/macaddress"
-    }
-    ssh = {
-      version = "2.7.0"
-      source  = "loafoe/ssh"
-    }
-
   }
 }
 
