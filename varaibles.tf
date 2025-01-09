@@ -1,21 +1,29 @@
-variable "proxmox_api_token" {
-  type      = string
-  sensitive = true
-  default   = ""
-}
-
-variable "proxmox_api_user" {
-  type    = string
-  default = ""
-}
-
 variable "proxmox_host" {
-  type    = string
-  default = ""
+  type = string
 }
 
 variable "proxmox_node" {
-  type    = string
-  default = ""
+  type = string
+}
+
+variable "proxmox_password" {
+  type      = string
+  sensitive = true
+}
+
+variable "proxmox_user" {
+  type = string
+}
+
+variable "vmid" {
+  type = number
+}
+
+variable "ip_address" {
+  type = string
+}
+
+variable "gateway" {
+  type = string
 }
 
