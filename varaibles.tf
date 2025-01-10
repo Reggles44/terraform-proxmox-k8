@@ -22,3 +22,7 @@ variable "vmid" {
 variable "node_count" {
   type = number
 }
+
+variable "vlan_tag" {
+  type = number
+}
