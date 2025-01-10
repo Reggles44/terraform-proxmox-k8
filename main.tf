@@ -15,7 +15,7 @@ provider "proxmox" {
 }
 
 resource "proxmox_vm_qemu" "k8_node" {
-  count            = 10
+  count            = var.node_count
   name             = "k8-node-${count.index + 1}"
   desc             = "K8 Node ${count.index + 1}"
   vmid             = var.vmid + count.index + 1

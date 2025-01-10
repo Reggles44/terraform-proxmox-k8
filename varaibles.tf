@@ -19,3 +19,6 @@ variable "vmid" {
   type = number
 }
 
+variable "node_count" {
+  type = number
+}
