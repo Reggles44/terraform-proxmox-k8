@@ -26,3 +26,12 @@ variable "node_count" {
 variable "vlan_tag" {
   type = number
 }
+
+variable "ip_address" {
+  type = string
+}
+
+variable "gateway" {
+  type = string
+}
+
