@@ -16,8 +16,8 @@ provider "proxmox" {
 
 resource "proxmox_vm_qemu" "k8_node" {
   count            = 10
-  name             = "k8-node-${count.index}"
-  desc             = "K8 Node ${count.index}"
+  name             = "k8-node-${count.index + 1}"
+  desc             = "K8 Node ${count.index + 1}"
   vmid             = var.vmid + count.index + 1
   clone            = "debian"
   full_clone       = true
@@ -61,8 +61,7 @@ resource "proxmox_vm_qemu" "k8_node" {
 
   os_type       = "cloud-init"
   cicustom      = "user=local:snippets/debian.yml"
-  ipconfig0     = "ip=dhcp"
-  ipconfig1     = "ip=dhcp"
+  ipconfig0     = "dhcp"
   agent_timeout = 300
 
   connection {
