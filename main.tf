@@ -53,7 +53,7 @@ resource "proxmox_vm_qemu" "k8_node" {
   }
 
   network {
-    id     = 1
+    id     = 0
     bridge = "vmbr0"
     model  = "virtio"
     tag    = 8
