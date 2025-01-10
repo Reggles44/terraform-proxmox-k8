@@ -56,6 +56,8 @@ resource "proxmox_vm_qemu" "k8_node" {
     id     = 0
     bridge = "vmbr0"
     model  = "virtio"
+    tag    = 8
+
   }
 
   os_type       = "cloud-init"
