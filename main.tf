@@ -61,7 +61,7 @@ resource "proxmox_vm_qemu" "k8_node" {
 
   os_type       = "cloud-init"
   cicustom      = "user=local:snippets/debian.yml"
-  ipconfig0     = "ip=${cidrhost(var.ip_address / 24, (count.index + 1))}/24,gw=${var.gateway}"
+  ipconfig0     = "ip=dhcp"
   agent_timeout = 120
 
   connection {
